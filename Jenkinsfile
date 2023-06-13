@@ -5,13 +5,13 @@ pipeline {
         DOCKER_IMAGE_NAME = "bhavukm/train-schedule"
     }
     tools {
-        nodejs 'node' // Name of the Node.js installation defined in Jenkins
+        nodejs 'mynodejs' // Name of the Node.js installation defined in Jenkins
     }
     stages {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                tool 'node'
+                tool 'mynodejs'
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
