@@ -4,6 +4,9 @@ pipeline {
         //be sure to replace "bhavukm" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "bhavukm/train-schedule"
     }
+    tools {
+        nodejs 'node' // Name of the Node.js installation defined in Jenkins
+    }
     stages {
         stage('Build') {
             steps {
