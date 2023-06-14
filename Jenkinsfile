@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         //be sure to replace "bhavukm" with your own Docker Hub username
-        DOCKER_IMAGE_NAME = "bhavukm/train-schedule"
+        DOCKER_IMAGE_NAME = "sujithak/train-schedule"
     }
     tools {
         nodejs 'mynode' // Name of the Node.js installation defined in Jenkins
